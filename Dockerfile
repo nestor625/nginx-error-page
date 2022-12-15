@@ -11,3 +11,4 @@ COPY --chown=nginx \
 COPY --chown=nginx \
      --from=tarampampam/error-pages \
      /opt/html/ghost /usr/share/nginx/errorpages/_error-pages
+
