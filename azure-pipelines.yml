@@ -3,7 +3,8 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 pool:
   name: nestor-pipeline-agent
-  
+  vmImage: ubuntu-latest
+
 trigger:
 - master
 
@@ -19,8 +20,6 @@ stages:
   jobs:
   - job: Build
     displayName: Build
-    pool:
-      vmImage: ubuntu-latest
     steps:
     - task: Docker@2
       displayName: Build an image
